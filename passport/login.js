@@ -2,7 +2,7 @@ var LocalStrategy = require('passport-local').Strategy;
 var userModel = require('../models/user');
 var bCrypt = require('bcrypt-nodejs');
 var mongoose = require('mongoose');
-var elfLog = require('elven-code').elvenLog('passport-login');
+var elfLog = require('isit-code-calvert').elvenLog('passport-login');
 
 module.exports = function(passport) {
     'use strict';
