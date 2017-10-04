@@ -1,0 +1,15 @@
+[Unit]
+Description=Run ElvenImagePicker
+
+[Service]
+ExecStart=/usr/bin/node /home/charlie/bin/elven-image-picker/bin/www
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=elven-image-picker
+User=charlie
+Group=charlie
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target

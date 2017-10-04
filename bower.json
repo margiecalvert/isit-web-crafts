@@ -1,0 +1,30 @@
+{
+  "name": "elven-image-picker",
+  "version": "0.1.0",
+  "authors": [
+    "Charlie Calvert"
+  ],
+  "description": "Angular Unit Tests",
+  "license": "MIT",
+  "keywords": [
+    "bower",
+    "prog",
+    "isit",
+    "tmp"
+  ],
+  "moduleType": [],
+  "homepage": "http://www.elvenware.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "elven-tools": "^0.0.1",
+    "bootswatch": "^3.3.6",
+    "requirejs": "^2.2.0"
+  }
+}

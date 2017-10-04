@@ -1,0 +1,42 @@
+{
+  "name": "isit-web-crafts",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "karma start",
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.17.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "^3.0.1",
+    "express": "^4.15.4",
+    "express-session": "^1.15.5",
+    "jade": "~1.11.0",
+    "marked": "~0.3.6",
+    "mongoose": "^4.11.10",
+    "morgan": "^1.8.2",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "serve-favicon": "^2.4.3",
+    "sharp": "^0.18.2"
+  },
+  "devDependencies": {
+    "grunt": "~1.0.1",
+    "grunt-contrib-clean": "~1.1.0",
+    "grunt-contrib-jade": "~1.0.0",
+    "grunt-contrib-jshint": "~1.1.0",
+    "grunt-exec": "^3.0.0",
+    "grunt-jsbeautifier": "~0.2.13",
+    "grunt-jscs": "~3.0.1",
+    "grunt-karma": "~2.0.0",
+    "jasmine-core": "~2.8.0",
+    "jasmine-jquery": "~2.1.1",
+    "jshint-stylish": "~2.2.1",
+    "karma": "~1.7.1",
+    "karma-jasmine": "~1.1.0",
+    "karma-phantomjs-launcher": "~1.0.4",
+    "karma-spec-reporter": "0.0.31"
+  }
+}
