@@ -4,8 +4,8 @@
 
 var fs = require('fs');
 var os = require('os');
-var utils = require('isit-code-calvert').elfUtils;
-var elfLog = require('isit-code-calvert').elfLog;
+var utils = require('isit-code-lastname').elfUtils;
+var elfLog = require('isit-code-lastname').elfLog;
 
 function getConfigName() {
     'use strict';
