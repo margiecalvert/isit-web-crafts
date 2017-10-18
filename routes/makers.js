@@ -4,14 +4,14 @@
 
 var express = require('express');
 var router = express.Router();
-var walker = require('isit-site-tools-calvert').walker;
-var walkRunner = require('isit-site-tools-calvert').walkRunner;
-var imagesTest = require('isit-site-tools-calvert').imagesTest;
-var config = require('isit-code-lastname').elfConfig;
+var walker = require('mcalvert-isit-site-tools').walker;
+var walkRunner = require('mcalvert-isit-site-tools').walkRunner;
+var imagesTest = require('mcalvert-isit-site-tools').imagesTest;
+var config = require('mcalvert-isit-code').elfConfig;
 var fs = require('fs');
-var utils = require('isit-code-lastname').elfUtils;
-var imageHelp = require('isit-site-tools-calvert').imageHelp;
-var elfLog = require('isit-code-lastname').elvenLog('makers');
+var utils = require('mcalvert-isit-code').elfUtils;
+var imageHelp = require('mcalvert-isit-site-tools').imageHelp;
+var elfLog = require('mcalvert-isit-code').elvenLog('makers');
 elfLog.setLevel(elfLog.logLevelDetails);
 
 router.get('/makeHtml', function(request, response) {
