@@ -1,3 +1,4 @@
+
 body {
     padding: 50px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -19,7 +20,7 @@ input {
     width: 250px;
 }
 
-div {
+div.borderMan {
     border: #d4e6ff solid thin;
     padding: 3px;
     margin-top: 3px;
