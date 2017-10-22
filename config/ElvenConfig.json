@@ -8,7 +8,7 @@
             "Git/my_destination"
         ],
         "destination-dirs": [
-            "/home/bcuser/Git/my_destination",
+            "/home/bcuser/Git/my_destination/",
             "/var/www/html/"
         ],
         "destination-dirs-extra": [{
