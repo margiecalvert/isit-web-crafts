@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "private": false,
   "scripts": {
-    "test": "karma start",
+    "test": "jest --coverage",
+    "testKarma": "karma start",
     "start": "nodemon ./bin/www",
-    "bundle": "node_modules/.bin/webpack"
+    "buildDev": "node_modules/.bin/webpack"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
