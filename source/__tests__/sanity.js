@@ -7,9 +7,9 @@ import Adapter from 'enzyme-adapter-react-16';
 import ElfDebugEnzyme from '../ElfDebugEnzyme';
 const elfDebugEnzyme = new ElfDebugEnzyme(true, 'sanity');
 configure({adapter: new Adapter()});
-import jQuery from 'jquery';
-global.jQuery = jQuery;
-global.$ = jQuery;
+//import jQuery from 'jquery';
+//global.jQuery = jQuery;
+//global.$ = jQuery;
 //import '../fake-pub-sub';
 //import raf from '../temp-poly-fills';
 
