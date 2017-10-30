@@ -6,7 +6,7 @@
     "test": "jest --coverage",
     "testKarma": "karma start",
     "start": "nodemon ./bin/www",
-    "buildDev": "node_modules/.bin/webpack"
+    "buildDev": "node_modules/.bin/webpack --watch"
   },
   "jest": {
     "setupFiles": [

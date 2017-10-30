@@ -3123,11 +3123,32 @@ var _ReactHome = __webpack_require__(101);
 
 var _ReactHome2 = _interopRequireDefault(_ReactHome);
 
+var _MakeHtml = __webpack_require__(207);
+
+var _MakeHtml2 = _interopRequireDefault(_MakeHtml);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var homeDiv = null;
+
+function reactMakeHtml(event, customMessage) {
+    _reactDom2.default.render(_react2.default.createElement(_MakeHtml2.default, null), homeDiv);
+}
+
+function reactHome() {
+    $('#pageLoad').empty();
+    home();
+}
+
+function home() {
+    _reactDom2.default.render(_react2.default.createElement(_ReactHome2.default, null), homeDiv);
+}
+
 $(document).ready(function () {
-    var home = document.getElementById('home');
-    _reactDom2.default.render(_react2.default.createElement(_ReactHome2.default, null), home);
+    homeDiv = document.getElementById('home');
+    home();
+    $.subscribe('reactMakeHtml', reactMakeHtml);
+    $.subscribe('home', reactHome);
 });
 
 /***/ }),
@@ -23376,7 +23397,7 @@ var HomeButtons = function (_React$Component) {
                     _react2.default.createElement(
                         'h1',
                         null,
-                        'Home Page'
+                        'WebCraft Home Page'
                     ),
                     _react2.default.createElement(
                         _RaisedButton2.default,
@@ -31896,5 +31917,97 @@ exports.default = {
 
 };
 
+/***/ }),
+/* 207 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _MuiThemeProvider = __webpack_require__(103);
+
+var _MuiThemeProvider2 = _interopRequireDefault(_MuiThemeProvider);
+
+var _RaisedButton = __webpack_require__(186);
+
+var _RaisedButton2 = _interopRequireDefault(_RaisedButton);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var MakeHtml = function (_React$Component) {
+    _inherits(MakeHtml, _React$Component);
+
+    function MakeHtml() {
+        _classCallCheck(this, MakeHtml);
+
+        var _this = _possibleConstructorReturn(this, (MakeHtml.__proto__ || Object.getPrototypeOf(MakeHtml)).call(this));
+
+        _this.state = {
+            home: 'Go Home'
+        };
+        return _this;
+    }
+
+    _createClass(MakeHtml, [{
+        key: 'goHome',
+        value: function goHome() {
+            $.publish('home', {
+                message: "The user wants to go home."
+            });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+
+            return _react2.default.createElement(
+                _MuiThemeProvider2.default,
+                null,
+                _react2.default.createElement(
+                    'div',
+                    null,
+                    _react2.default.createElement(
+                        _RaisedButton2.default,
+                        {
+                            style: buttonStyle,
+                            primary: true,
+                            onClick: this.goHome },
+                        this.state.home
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        null,
+                        'This is the React MakeHtml component.'
+                    )
+                )
+            );
+        }
+    }]);
+
+    return MakeHtml;
+}(_react2.default.Component);
+
+var buttonStyle = {
+    margin: '10px 10px 10px 0'
+};
+
+exports.default = MakeHtml;
+
 /***/ })
 /******/ ]);
+//# sourceMappingURL=bundle.js.map

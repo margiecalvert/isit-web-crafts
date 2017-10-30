@@ -24,7 +24,7 @@ class HomeButtons extends React.Component {
     render() {
         return <MuiThemeProvider>
             <div>
-                <h1>Home Page</h1>
+                <h1>WebCraft Home Page</h1>
                 <RaisedButton
                     id="makeHtml"
                     style={buttonStyle}
