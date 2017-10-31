@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactHome from '../ReactHome';
 import HomeButtons from '../HomeButtons';
+import MakeHtml from '../MakeHtml';
+import MakeHtmlDropDowns from '../MakeHtmlDropDowns';
+import MakeHtmlHomeButton from '../MakeHtmlHomeButton';
 import {configure, shallow, mount} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import ElfDebugEnzyme from '../ElfDebugEnzyme';
@@ -24,6 +27,22 @@ describe('WebCrafts Sanity Test', function() {
     it('tests if we can load ReactHome', () => {
         const div = document.createElement('div');
         ReactDOM.render(<ReactHome/>, div);
+    });
+
+    it('tests if we can load MakeHtmlDropDowns', () => {
+        const div = document.createElement('div');
+        ReactDOM.render(<MakeHtmlDropDowns/>, div);
+    });
+
+    it('tests if we can load MakeHtmlHomeButton', () => {
+        const div = document.createElement('div');
+        ReactDOM.render(<MakeHtmlHomeButton/>, div);
+    });
+
+
+    it('tests if we can load MakeHtml', () => {
+        const div = document.createElement('div');
+        ReactDOM.render(<MakeHtml/>, div);
     });
 
     it('tests if we can load HomeButtons', () => {

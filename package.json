@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": false,
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest --coverage --watch",
     "testKarma": "karma start",
     "start": "nodemon ./bin/www",
     "buildDev": "node_modules/.bin/webpack --watch"
