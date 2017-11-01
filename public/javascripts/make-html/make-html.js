@@ -35,8 +35,16 @@ define(['display', 'walking'], function(display, walking) {
         });
     }
 
+
+
     function walk() {
         walking.runWalk(radioWalkType);
+    }
+
+    function publishRectMakeHtml() {
+        $.publish('reactMakeHtml', {
+            message : "Publisher Constructor Called"
+        });
     }
 
     return {
@@ -49,6 +57,7 @@ define(['display', 'walking'], function(display, walking) {
                 });
                 walking.configurePageOne();
                 loadConfig();
+                publishRectMakeHtml();
             });
         }
     };
