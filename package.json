@@ -9,6 +9,13 @@
     "buildDev": "node_modules/.bin/webpack --watch"
   },
   "jest": {
+    "verbose": true,
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "ElfDebugEnzyme.js",
+      "tiny-pub-sub.js",
+      "temp-poly-fills.js"
+    ],
     "setupFiles": [
       "./source/setup-jest.js"
     ]
@@ -18,23 +25,23 @@
     "body-parser": "^1.18.2",
     "cookie-parser": "~1.4.3",
     "debug": "^3.1.0",
-    "express": "^4.16.1",
+    "express": "^4.16.2",
     "express-session": "^1.15.6",
     "jquery": "^3.2.1",
     "marked": "~0.3.6",
     "material-ui": "^0.19.4",
     "mcalvert-isit-code": "^1.0.1",
     "mcalvert-isit-site-tools": "^1.0.1",
-    "mongoose": "^4.12.0",
+    "mongoose": "^4.12.5",
     "morgan": "^1.9.0",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "pug": "^2.0.0-rc.4",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "serve-favicon": "^2.4.5",
     "sharp": "^0.18.4",
-    "webpack": "^3.8.1",
+    "webpack": "^3.9.1",
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
@@ -61,6 +68,6 @@
     "karma-phantomjs-launcher": "~1.0.4",
     "karma-spec-reporter": "0.0.31",
     "react-test-renderer": "^16.0.0",
-    "webpack-dev-server": "^2.9.2"
+    "webpack-dev-server": "^2.9.5"
   }
 }
