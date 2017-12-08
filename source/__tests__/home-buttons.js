@@ -14,6 +14,7 @@ configure({adapter: new Adapter()});
 import jQuery from 'jquery';
 global.jQuery = jQuery;
 global.$ = jQuery;
+import '../../public/javascripts/tools/tiny-pub-sub.js';
 //import '../fake-pub-sub';
 import raf from '../temp-poly-fills';
 
@@ -26,16 +27,22 @@ describe('Home Button Tests', () =>{
         expect(true).toBe(true);
     });
 
-    it('publishes clientMakeHtml event after button click', () => {
+    it('publishes clientMakeHtml event after button click with done', (done) => {
         const wrapper = shallow(<HomeButtons/>);
         $.subscribe('clientMakeHtml', (event, target) => {
-            console.log(JSON.stringify(event, null, 4));
-            console.log(target);
-            expect(event.type).toBe('clientMakeHtml');
             expect(target.message).toBe('The user wants to makeHtml.');
+            done();
         });
         wrapper.find('#makeHtml').simulate('click');
     });
 
+    it('publishes clientMakeImage event after button click with done', (done) => {
+        const wrapper = shallow(<HomeButtons/>);
+        $.subscribe('clientMakeImage', (event, target) => {
+            expect(target.message).toBe('The user wants to makeImage.');
+            done();
+        });
+        wrapper.find('#makeImage').simulate('click');
+    });
 
 });

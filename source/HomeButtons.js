@@ -21,6 +21,12 @@ class HomeButtons extends React.Component {
         });
     }
 
+    makeImage() {
+        $.publish('clientMakeImage', {
+            message : "The user wants to makeImage."
+        });
+    }
+
     render() {
         return <MuiThemeProvider>
             <div>
@@ -31,6 +37,7 @@ class HomeButtons extends React.Component {
                     primary={true}
                     onClick={this.makeHtml}>{this.state.makeHtml}</RaisedButton>
                 <RaisedButton
+                    id="makeImage"
                     style={buttonStyle}
                     primary={true}
                     onClick={this.makeImage}>{this.state.makeImage}</RaisedButton>
